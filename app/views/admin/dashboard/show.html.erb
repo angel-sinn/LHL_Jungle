@@ -11,7 +11,7 @@
   <tbody>
     <tr>
       <th scope="row">Categories</th>
-      <td><%= link_to 'Apparel', '/categories/1' %> || <%= link_to 'Electronics', '/categories/2' %> || <%= link_to 'Furniture', '/categories/3' %></td>
+      <td><%= link_to @cat1.name, @cat1 %> || <%= link_to @cat2.name, @cat2 %> || <%= link_to @cat3.name, @cat3 %></td>
       <td><%= @totalcategories %></td>
     </tr>
     <tr>
