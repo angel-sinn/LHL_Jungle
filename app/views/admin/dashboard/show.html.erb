@@ -1,2 +1,23 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h2>Admin Dashboard</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Link</th>
+      <th scope="col">Total Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Categories</th>
+      <td><%= link_to 'Apparel', '/categories/1' %> || <%= link_to 'Electronics', '/categories/2' %> || <%= link_to 'Furniture', '/categories/3' %></td>
+      <td><%= @totalcategories %></td>
+    </tr>
+    <tr>
+      <th scope="row">Products</th>
+      <td><%= link_to 'Products', '/admin/products' %></td>
+      <td><%= @totalproducts %></td>
+    </tr>
+  </tbody>
+</table>
