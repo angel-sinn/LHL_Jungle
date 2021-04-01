@@ -21,6 +21,11 @@ Rails.application.routes.draw do
 
   end
 
+  #showing users a login form, logging them in, and logging them out
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   # bcrypt
   get '/signup/' => 'users#new'
   post '/users' => 'users#create'
