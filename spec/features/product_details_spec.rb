@@ -33,7 +33,7 @@ RSpec.feature "Visitor navigates to product detail page from home page", type: :
     scenario "They can navigate to relevant product detail page by clicking on the product detail button from home page" do
     # ACT
     visit root_path
-    page.first('article.product').find('a.btn-default').click
+    page.first('article.product').click_on 'Details'
 
     save_screenshot
 
