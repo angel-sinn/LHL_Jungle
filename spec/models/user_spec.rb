@@ -78,7 +78,8 @@ RSpec.describe User, type: :model do
       it 'will log in successfully' do
         @user = User.create(first_name: "Angel", last_name: "Sin", email: "angel@test.com", password: "password", password_confirmation: "password")
         @current_user = User.authenticate_with_credentials('angel@test.com', 'password')
-        expect(@current_user.email).to eql(@user.email)
+        expect(@current_user).to_not be(nil)
+        expect(@current_user).to eql(@user)
       end
     end
 
@@ -86,7 +87,8 @@ RSpec.describe User, type: :model do
       it 'will log in successfully' do
         @user = User.create(first_name: "Angel", last_name: "Sin", email: "angel@test.com", password: "password", password_confirmation: "password")
         @current_user = User.authenticate_with_credentials('   angel@test.com   ', 'password')
-        expect(@current_user.email).to eql(@user.email)
+        expect(@current_user).to_not be(nil)
+        expect(@current_user).to eql(@user)
       end
     end
 
@@ -94,7 +96,8 @@ RSpec.describe User, type: :model do
       it 'will log in successfully' do
         @user = User.create(first_name: "Angel", last_name: "Sin", email: "angel@test.com", password: "password", password_confirmation: "password")
         @current_user = User.authenticate_with_credentials('ANGEL@test.com', 'password')
-        expect(@current_user.email).to eql(@user.email)
+        expect(@current_user).to_not be(nil)
+        expect(@current_user).to eql(@user)
       end
     end
 
