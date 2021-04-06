@@ -132,5 +132,26 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## USERS
+
+puts "Re-creating Users ..."
+
+User.destroy_all
+
+User.create!({
+  first_name: 'Angel',
+  last_name: 'Sinn',
+  email: 'angel@jungle.com',
+  password: ENV['USER_PASSWORD'],
+  password_confirmation: ENV['USER_PASSWORD']
+})
+
+User.create!({
+  first_name: 'Test',
+  last_name: 'User',
+  email: 'testuser@jungle.com',
+  password: ENV['USER_PASSWORD'],
+  password_confirmation: ENV['USER_PASSWORD']
+})
 
 puts "DONE!"
