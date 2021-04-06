@@ -55,3 +55,6 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Attributes in folder
+.DS_Store
