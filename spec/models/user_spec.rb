@@ -59,7 +59,7 @@ RSpec.describe User, type: :model do
   describe '.authenticate_with_credentials' do
 
     context 'given user provides incorrect login credentials (email or password)' do
-      it 'returns the user' do
+      it 'will not log in successfully' do
         @user = User.create(name: "Angel", email: "angel@test.com", password: "password", password_confirmation: "password")
         @user = User.authenticate_with_credentials('angel@test.com', 'password1234')
         expect(@user).to be(nil)
@@ -67,7 +67,7 @@ RSpec.describe User, type: :model do
     end
 
     context 'given user provides correct login credentials (email & password)' do
-      it 'returns the user' do
+      it 'will log in successfully' do
         @user = User.create(name: "Angel", email: "angel@test.com", password: "password", password_confirmation: "password")
         @user = User.authenticate_with_credentials('angel@test.com', 'password')
         expect(@user).to_not be(nil)
@@ -75,7 +75,7 @@ RSpec.describe User, type: :model do
     end
 
     context 'given user provides email with trailing white spaces but has correct login credentials' do
-      it 'returns the user' do
+      it 'will log in successfully' do
         @user = User.create(name: "Angel", email: "angel@test.com", password: "password", password_confirmation: "password")
         @user = User.authenticate_with_credentials('   angel@test.com   ', 'password')
         expect(@user).to_not be(nil)
@@ -83,7 +83,7 @@ RSpec.describe User, type: :model do
     end
 
     context 'given user provides email with CAPS but has correct login credentials' do
-      it 'returns the user' do
+      it 'will log in successfully' do
         @user = User.create(name: "Angel", email: "angel@test.com", password: "password", password_confirmation: "password")
         @user = User.authenticate_with_credentials('ANGEL@test.com', 'password')
         expect(@user).to_not be(nil)
