@@ -24,7 +24,7 @@ RSpec.feature "Visitor clicks on 'Add to Cart' button for a product on home page
 
     save_screenshot
 
-    page.first('article.product').find('button.btn-primary').click
+    page.first('article.product').click_on "Add"
 
     # # VERIFY
     expect(page).to have_content 'My Cart (1)'
