@@ -4,8 +4,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Project Stack
 
-**Front-End**: HTML, SASS
-**Back-End**: Ruby on Rails, SQLite
+**Front-End**: HTML, SASS  
+**Back-End**: Ruby on Rails, SQLite  
 **Testing**: RSpec, Capybara, Poltergeist, PhantomJS
 
 ## Final Product
