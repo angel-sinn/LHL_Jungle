@@ -14,7 +14,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 !["Gif of user experience"](https://github.com/angel-sinn/LHL_jungle-app/blob/master/docs/jungle-app-purchase.gif)
 
-**:computer: Admin expirence :computer:**
+**:computer: Admin experience :computer:**
 
 !["Gif of admin experience"](https://github.com/angel-sinn/LHL_jungle-app/blob/master/docs/jungle-app-admin.gif)
 
